@@ -1,62 +1,17 @@
-@import url(https://fonts.googleapis.com/css?family=Concert+One:regular);
-@import url(https://fonts.googleapis.com/css?family=Denk+One:regular);
-@import url(https://fonts.googleapis.com/css?family=Fjalla+One:regular);
-@import url(https://fonts.googleapis.com/css?family=Oswald:200,300,regular,500,600,700);
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: var(--font-cuarta);
-  overflow-x: hidden;
-}
+/* Error: Can't find stylesheet to import.
+ *   ,
+ * 1 | @import "general/fonts";
+ *   |         ^^^^^^^^^^^^^^^
+ *   '
+ *   scss\styles.scss 1:9  root stylesheet */
 
-a {
-  text-decoration: none;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Can't find stylesheet to import.\a   \2577 \a 1 \2502  @import \"general/fonts\";\d\a   \2502          ^^^^^^^^^^^^^^^\a   \2575 \a   scss\\styles.scss 1:9  root stylesheet";
 }
-
-section {
-  margin-top: 100px;
-}
-
-.w-50 {
-  width: 50%;
-}
-
-.w-33 {
-  width: 33.333%;
-}
-
-.no-visible {
-  opacity: 0;
-}
-
-.btn-transparent {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100px;
-  height: 40px;
-  color: #FFF;
-  border: 3px solid #FEE7A6;
-  border-radius: 30px;
-  text-align: center;
-  letter-spacing: 1px;
-  font-weight: 400;
-}
-
-.btn-prin {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100px;
-  height: 40px;
-  color: #FFF;
-  background: #EC6809;
-  /* border: 3px solid var(--color-tercero); */
-  border-radius: 30px;
-  text-align: center;
-  letter-spacing: 1px;
-  font-weight: 400;
-}
-
-/*# sourceMappingURL=styles.css.map */
