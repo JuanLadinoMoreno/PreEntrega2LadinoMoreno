@@ -312,4 +312,47 @@ nav .icons a {
   height: 400px;
 }
 
+.sect-bseller {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.sect-bseller .cont-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+}
+.sect-bseller .cont-text h3 {
+  color: #0F1854;
+  font-family: "Fjalla One";
+  font-size: 4vmin;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 10px;
+}
+.sect-bseller .cont-text p {
+  font-family: "Oswald";
+  color: #EC6809;
+  font-size: 2.3vmin;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-align: center;
+  margin: 10px;
+}
+.sect-bseller .img-cont {
+  display: grid;
+  grid-template-columns: repeat(2, 170px);
+  grid-template-rows: repeat(2, 170px);
+  gap: 2px;
+}
+.sect-bseller .img-cont img {
+  width: 100%;
+  height: 100%;
+}
+
 /*# sourceMappingURL=styles.css.map */
