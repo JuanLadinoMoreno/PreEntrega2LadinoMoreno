@@ -203,4 +203,40 @@ nav .icons a {
   height: 200px;
 }
 
+.sect-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.sect-icons .cont-icons {
+  /* background: #EC6809; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 80%;
+}
+.sect-icons .cont-icons .card-icon {
+  /* background: chartreuse; */
+  width: 300px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 20px;
+}
+.sect-icons .cont-icons .card-icon .icon-card {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 20px;
+}
+.sect-icons .cont-icons .card-icon p {
+  font-family: "Fjalla One";
+  font-size: 20px;
+  font-weight: 400;
+  color: #0F1854;
+  text-align: center;
+}
+
 /*# sourceMappingURL=styles.css.map */
