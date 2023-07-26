@@ -30,6 +30,14 @@ section {
     text-align: center;
     letter-spacing: 1px;
     font-weight: 400;
+    transition: all 0.5s;
+
+    &:hover{
+        color: $color-segundo;
+        background: #FFF;
+        border: 3px solid $color-segundo;
+        transform: scale(1.1);
+    }
 }
 
 .btn-prin {

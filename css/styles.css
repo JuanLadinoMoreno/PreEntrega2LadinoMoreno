@@ -42,6 +42,13 @@ section {
   text-align: center;
   letter-spacing: 1px;
   font-weight: 400;
+  transition: all 0.5s;
+}
+.btn-transparent:hover {
+  color: #EC6809;
+  background: #FFF;
+  border: 3px solid #EC6809;
+  transform: scale(1.1);
 }
 
 .btn-prin {
@@ -237,6 +244,72 @@ nav .icons a {
   font-weight: 400;
   color: #0F1854;
   text-align: center;
+}
+
+.menu-index {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.menu-index .cont-menu-index {
+  position: relative;
+  background: #0F1854;
+  /* border: 1px solid #fff; */
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-direction: column;
+  /* width: 33%; */
+  min-width: 350px;
+  height: 480px;
+  padding: 10px 20px;
+  z-index: -1;
+}
+.menu-index .cont-menu-index:nth-child(1) {
+  background: #0F1854;
+}
+.menu-index .cont-menu-index:nth-child(2) {
+  background: #F2CB05;
+}
+.menu-index .cont-menu-index:nth-child(3) {
+  background: #EC6809;
+}
+.menu-index .cont-menu-index:nth-child(4) {
+  background: #8F5B00;
+}
+.menu-index .cont-menu-index:nth-child(5) {
+  background: #80D25B;
+}
+.menu-index .cont-menu-index:nth-child(5) img, .menu-index .cont-menu-index:nth-child(4) img {
+  right: -20px;
+  width: 380px;
+  height: 400px;
+}
+.menu-index .cont-menu-index h3 {
+  font-family: "Concert One";
+  font-size: 35px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 200;
+  color: #FFF;
+}
+.menu-index .cont-menu-index p {
+  /* font-family: var(--font-tercera); */
+  color: #FFF;
+  width: 50%;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  z-index: 2;
+}
+.menu-index .cont-menu-index img {
+  position: absolute;
+  bottom: 0;
+  right: -61px;
+  width: 280px;
+  height: 400px;
 }
 
 /*# sourceMappingURL=styles.css.map */
