@@ -30,6 +30,10 @@ section {
   opacity: 0;
 }
 
+.r-span2 {
+  grid-row: span 2;
+}
+
 .btn-transparent {
   position: relative;
   display: flex;
@@ -442,6 +446,39 @@ nav .icons a {
   padding: 20px 0;
   margin: 10px 0;
   text-align: center;
+}
+
+.sect-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sect-gallery .grid-container {
+  width: 80%;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 210px);
+  padding: 15px;
+}
+.sect-gallery .grid-container:hover .item {
+  opacity: 0.4;
+}
+.sect-gallery .item {
+  border-radius: 10px;
+  overflow-y: hidden;
+  transition: all 0.6s;
+}
+.sect-gallery .item img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.sect-gallery .item:hover {
+  transform: scale(1.1);
+  opacity: 1 !important;
+  z-index: 2;
 }
 
 /*# sourceMappingURL=styles.css.map */
