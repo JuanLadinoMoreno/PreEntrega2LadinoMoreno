@@ -483,23 +483,25 @@ nav .icons a {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 210px);
   padding: 15px;
+  overflow-y: hidden;
 }
 .sect-gallery .grid-container:hover .item {
   opacity: 0.4;
 }
 .sect-gallery .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 10px;
-  overflow-y: hidden;
   transition: all 0.6s;
+  border-radius: 10px;
 }
 .sect-gallery .item img {
   width: 100%;
   height: 100%;
-  border-radius: 10px;
-  object-fit: cover;
 }
 .sect-gallery .item:hover {
-  transform: scale(1.1);
+  transform: scale(1.08);
   opacity: 1 !important;
   z-index: 2;
 }
@@ -547,6 +549,82 @@ nav .icons a {
 .sect-events .cont-images img {
   width: 100%;
   height: 100%;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #8F5B00;
+  padding: 30px 0;
+}
+footer p {
+  text-align: center;
+  color: #FFF;
+}
+footer .cont-food {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  padding: 20px 0;
+}
+footer .food-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #FFF;
+}
+footer .food-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #FFF;
+}
+footer .food-menu a {
+  color: #FFF;
+}
+footer .food-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #FFF;
+  padding: 10px;
+}
+footer .food-icons img {
+  width: 80px;
+  height: 80px;
+}
+footer .food-icons .icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+footer .food-icons .icons a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin: 0 5px;
+  font-size: 20px;
+  color: #fff;
+  background: var(--color-segundo);
+  border-radius: 50%;
+  opacity: 0.7;
+  transition: all 0.5s;
+}
+footer .food-icons .icons a:hover {
+  border: 3px solid #EC6809;
+  color: #EC6809;
+  background: #FFF;
+  opacity: 1;
+  transform: scale(1.1) rotateY(360deg);
 }
 
 /*# sourceMappingURL=styles.css.map */
