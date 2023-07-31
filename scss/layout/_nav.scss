@@ -27,6 +27,11 @@ nav {
                 letter-spacing: 1px;
             }
         }
+
+        @include Tablet() {
+            // opacity: 0;
+            display: none;
+        }
     }
 
     &::before {
@@ -65,7 +70,98 @@ nav {
             border-radius: 50%;
             border: 2px solid #FFF;
         }
+
+        @include Tablet() {
+            // opacity: 0;
+            display: none;
+        }
     
     }
 
+    .toogle-btn {
+        position: absolute;
+        right: 50px;
+        display: none;
+
+        i {
+            font-size: 25px;
+            color: #FFF;
+        }
+
+        @include Tablet() {
+            display: block;
+        }
+    }
+
+    @include Tablet() {
+        // opacity: 0;
+        display: none;
+    }
+
+    @include Tablet() {
+        top: 0;
+        background: transparent;
+        @include dFlex(space-between, center, row nowrap);
+
+    }
+
+}
+
+
+.dropdown-menus {
+    @include dFlex(center, center, column nowrap);
+    // align-items: flex-end;
+    // position: absolute;
+    // width: 250px;
+    @include cardBlur(75%, 75%);
+    height: 250px;
+    top: 100px;
+    right: 0;
+    // padding: 0 0;
+    z-index: 2;
+    position: absolute;
+    display: none;
+
+    ul {
+
+        height: 100%;
+        width: 100%;
+        @include dFlex(space-around, center, column nowrap);
+
+
+        a {
+            // height: 50px;
+            font-size: 20px;
+            font-weight: 700;
+            color: $color-tercero;
+            padding: 10px 0;
+            @include dFlex(center, center, column nowrap);
+
+            // &::before {
+            //     content: '';
+            //     position: absolute;
+            //     top: 10px;
+            //     left: 0;
+            //     width: 80%;
+            //     height: 1px;
+
+            //     background: #FFF;
+
+
+            // }
+
+
+
+        }
+    }
+
+    // @include Tablet() {
+    //     display: block;
+    // }
+
+}
+
+.dropdown-menus.opens {
+    display: block;
+    // position: fixed;
 }

@@ -136,6 +136,11 @@ nav ul li a {
   font-size: 18px;
   letter-spacing: 1px;
 }
+@media screen and (max-width: 768px) {
+  nav ul {
+    display: none;
+  }
+}
 nav::before {
   content: "";
   position: absolute;
@@ -169,6 +174,91 @@ nav .icons a {
   /* background: var(--color-segundo); */
   border-radius: 50%;
   border: 2px solid #FFF;
+}
+@media screen and (max-width: 768px) {
+  nav .icons {
+    display: none;
+  }
+}
+nav .toogle-btn {
+  position: absolute;
+  right: 50px;
+  display: none;
+}
+nav .toogle-btn i {
+  font-size: 25px;
+  color: #FFF;
+}
+@media screen and (max-width: 768px) {
+  nav .toogle-btn {
+    display: block;
+  }
+}
+@media screen and (max-width: 768px) {
+  nav {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  nav {
+    top: 0;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row nowrap;
+  }
+}
+
+.dropdown-menus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  width: 75%;
+  max-width: 75%;
+  color: fff;
+  padding: 50px 35px;
+  margin: 10px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+  border-left: 2px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  transition: all 0.5s;
+  height: 250px;
+  top: 100px;
+  right: 0;
+  z-index: 2;
+  position: absolute;
+  display: none;
+}
+.dropdown-menus ul {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+.dropdown-menus ul a {
+  font-size: 20px;
+  font-weight: 700;
+  color: #FEE7A6;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+
+.dropdown-menus.opens {
+  display: block;
 }
 
 .header {
@@ -625,6 +715,160 @@ footer .food-icons .icons a:hover {
   background: #FFF;
   opacity: 1;
   transform: scale(1.1) rotateY(360deg);
+}
+
+.sectMenu1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  top: -100px;
+}
+.sectMenu1 .contMenus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  top: 0;
+}
+.sectMenu1 .contMenus:nth-child(1) .contMenus__header {
+  background: url(../../../img/menu/sect/bgBurg.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.sectMenu1 .contMenus:nth-child(2) .contMenus__header {
+  background: url(../../../img/menu/sect/bgBaguette.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.sectMenu1 .contMenus:nth-child(3) .contMenus__header {
+  background: url(../../../img/menu/sect/bgSandw.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.sectMenu1 .contMenus__header {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: -1;
+}
+.sectMenu1 .contMenus__header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 24, 84, 0.43);
+  z-index: -1;
+}
+.sectMenu1 .contMenus__header h2 {
+  font-family: "Concert One";
+  font-size: 9vmin;
+  color: #FEE7A6;
+  letter-spacing: 1px;
+  text-align: center;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+.sectMenu1 .contMenus__menus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  width: 100%;
+}
+.sectMenu1 .contMenus__menus .menuContenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row nowrap;
+  margin: 25px 5px;
+  padding: 0 20px;
+  width: 40%;
+  min-width: 420px;
+  max-width: 720px;
+}
+.sectMenu1 .contMenus__menus .menuContenedor img {
+  width: 50%;
+}
+.sectMenu1 .contMenus__menus .menuContenedor__datosMen {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 40%;
+  min-height: 220px;
+  margin: 0 15px;
+}
+.sectMenu1 .contMenus__menus .menuContenedor__datosMen h3 {
+  font-family: "Concert One";
+  font-size: 24px;
+  font-weight: 400;
+  color: #EC6809;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 10px 0;
+}
+.sectMenu1 .contMenus__menus .menuContenedor__datosMen ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+.sectMenu1 .contMenus__menus .menuContenedor__datosMen ul li {
+  font-family: "Fjalla One";
+  font-size: 15px;
+  font-weight: 400;
+  color: #0F1854;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.sectMenu1 .contMenus__menus .menuContenedor__contPrecios {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: row nowrap;
+  padding: 5px 0;
+}
+.sectMenu1 .contMenus__menus .menuContenedor__precios {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+.sectMenu1 .contMenus__menus .menuContenedor__precios h4 {
+  font-family: "Fjalla One";
+  font-size: 16px;
+  font-weight: 400;
+  color: #0F1854;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 5px 0;
+}
+.sectMenu1 .contMenus__menus .menuContenedor__precios p {
+  font-family: "Fjalla One";
+  font-size: 15px;
+  font-weight: 400;
+  color: #EC6809;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 5px 0;
 }
 
 /*# sourceMappingURL=styles.css.map */

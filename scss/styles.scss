@@ -3,6 +3,8 @@
 @import "generales/reset";
 @import "generales/variables";
 @import "generales/generales";
+@import "generales/mixin";
+@import "generales/mediaq";
 
 //LAYOUT
 @import "layout/nav";
@@ -14,3 +16,6 @@
 @import "layout/gallery";
 @import "layout/ban-eventos";
 @import "layout/footer";
+
+// PAGES
+@import "pages/menu";
