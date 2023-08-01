@@ -1027,4 +1027,138 @@ footer .food-icons .icons a:hover {
   text-align: center;
 }
 
+.headerPaga {
+  width: 100%;
+  height: 40vh;
+  position: relative;
+  background: url("../../../img/headers/bg-asad.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: -1;
+  border-radius: 0 0 50% 50%;
+}
+.headerPaga::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 24, 84, 0.43);
+  z-index: -1;
+}
+.headerPaga .header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+.headerPaga .header-content h1 {
+  font-family: "Concert One";
+  font-size: 115px;
+  color: #FEE7A6;
+  letter-spacing: 1px;
+  text-align: center;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+
+.scAsados {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  width: 100%;
+}
+.scAsados .cntSec1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  width: 100%;
+}
+.scAsados .cntSec1__cntDatos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  width: 50%;
+  margin: 0 10px;
+  position: relative;
+}
+.scAsados .cntSec1__cntDatos::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 350px;
+  height: 420px;
+  background: url(../../../img/asados/campfire.svg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0.1;
+  z-index: -1;
+}
+.scAsados .cntSec1__cntDatos h3 {
+  font-family: "Denk One";
+  font-size: 4vmin;
+  color: #000;
+  letter-spacing: 1px;
+  text-align: center;
+  font-weight: 200;
+}
+.scAsados .cntSec1__cntProducts {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-flow: column nowrap;
+}
+.scAsados .cntSec1__cntProducts h4 {
+  font-family: "Denk One";
+  font-size: 3.7vmin;
+  color: #000;
+  letter-spacing: 1px;
+  text-align: center;
+  font-weight: 200;
+  margin-top: 15px;
+}
+.scAsados .cntSec1__cntProducts p {
+  font-size: 18px;
+  color: #000;
+  text-align: justify;
+  font-weight: 400;
+  margin: 15px;
+}
+.scAsados .cntSec1__cntImages {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: "item1 ." ". item2" "item3 .";
+  gap: 20px;
+  margin: 0 10px;
+}
+.scAsados .cntSec1__cntImages img {
+  width: 140px;
+  height: 160px;
+}
+.scAsados .cntSec1__cntImages img:nth-child(1) {
+  grid-area: item1;
+}
+.scAsados .cntSec1__cntImages img:nth-child(2) {
+  grid-area: item2;
+}
+.scAsados .cntSec1__cntImages img:nth-child(3) {
+  grid-area: item3;
+}
+@media screen and (max-width: 768px) {
+  .scAsados .cntSec1__cntImages {
+    display: none;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */
