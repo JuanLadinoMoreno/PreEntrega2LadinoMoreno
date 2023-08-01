@@ -755,19 +755,19 @@ footer .food-icons .icons a:hover {
   top: 0;
 }
 .sectMenu1 .contMenus:nth-child(1) .contMenus__header {
-  background: url(../../../img/menu/sect/bgBurg.jpg);
+  background: url(../img/menu/sect/bgBurg.jpg);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
 }
 .sectMenu1 .contMenus:nth-child(2) .contMenus__header {
-  background: url(../../../img/menu/sect/bgBaguette.jpg);
+  background: url(../img/menu/sect/bgBaguette.jpg);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
 }
 .sectMenu1 .contMenus:nth-child(3) .contMenus__header {
-  background: url(../../../img/menu/sect/bgSandw.jpg);
+  background: url(../img/menu/sect/bgSandw.jpg);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -1031,7 +1031,7 @@ footer .food-icons .icons a:hover {
   width: 100%;
   height: 40vh;
   position: relative;
-  background: url("../../../img/headers/bg-asad.jpg");
+  background: url("../../../wqimg/headers/bg-asad.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
