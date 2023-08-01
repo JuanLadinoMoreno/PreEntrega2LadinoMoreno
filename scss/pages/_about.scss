@@ -1,86 +1,9 @@
 .headerPagg {
-    @include headerP('../img/headers/bg-about.jpg');
+    @include headerP('../../../img/headers/bg-about.jpg');
 
-    // &::before {
-
-    //     content: '';
-    //     position: absolute;
-    //     top: 0;
-    //     left: 0;
-    //     width: 100%;
-    //     height: 100%;
-    //     background: rgba(15, 24, 84, 0.43);
-    //     z-index: -1;
-
-
-    // }
-
-    // .header-content {
-    //     @include dFlex(center, center, column nowrap);
-
-
-
-    //     h1 {
-    //         font-family: $font-primera;
-    //         font-size: 115px;
-    //         color: $color-tercero;
-    //         letter-spacing: 1px;
-    //         text-align: center;
-    //         font-weight: 200;
-    //         text-transform: uppercase;
-    //     }
-
-
-    // }
+   
 }
 
-// .sectAbo {
-
-//     img {
-//         width: 450px;
-//         height: 350px;
-//     }
-
-//     h3 {
-//         font: {
-//             family: $font-primera;
-//             size: 55px;
-//             weight: 200;
-//         }
-
-//         text: {
-//             align: center;
-//             transform: uppercase;
-//             // shadow: 1px solid $color-tercero;
-//         }
-
-//         color: #7e7e7e;
-//         letter-spacing: 1px;
-//         -webkit-text-stroke: 2px #fff
-//     }
-
-
-//     h2 {
-//         font: {
-//             family: $font-primera;
-//             size: 55px;
-//             weight: 200;
-//         }
-
-//         text: {
-//             align: center;
-//             transform: uppercase;
-//             shadow: 3px 5px #A95000;
-//         }
-
-//         color: $color-segundo;
-//         letter-spacing: 1px;
-
-//     }
-
-
-
-// }
 
 .sectAbo {
 
@@ -236,9 +159,6 @@
 
         text: {
             align: center;
-            // transform: uppercase;
-            // shadow: #FC0 5px 0 5px;
-            // shadow: 3px 5px #A95000;
         }
     }
     
