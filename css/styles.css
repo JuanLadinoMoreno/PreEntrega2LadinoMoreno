@@ -108,6 +108,26 @@ section {
   transform: translateX(100px);
 }
 
+.iconsPrin {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px 10px;
+}
+.iconsPrin a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  margin: 0 5px;
+  font-size: 17px;
+  color: #EC6809;
+  /* background: var(--color-segundo); */
+  border-radius: 50%;
+  border: 2px solid #EC6809;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -646,6 +666,7 @@ footer {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 100%;
   background-color: #8F5B00;
   padding: 30px 0;
 }
@@ -869,6 +890,141 @@ footer .food-icons .icons a:hover {
   text-transform: uppercase;
   letter-spacing: 1px;
   margin: 5px 0;
+}
+
+.headerPagg {
+  width: 100%;
+  height: 40vh;
+  position: relative;
+  background: url("../../../img/headers/bg-about.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: -1;
+  border-radius: 0 0 50% 50%;
+}
+.headerPagg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 24, 84, 0.43);
+  z-index: -1;
+}
+.headerPagg .header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+.headerPagg .header-content h1 {
+  font-family: "Concert One";
+  font-size: 115px;
+  color: #FEE7A6;
+  letter-spacing: 1px;
+  text-align: center;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+
+.sectAbo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
+  padding-top: 60px;
+}
+.sectAbo__images img {
+  width: 100%;
+  height: 100%;
+  transform: rotateY(10deg);
+}
+.sectAbo__datos {
+  padding: 50px 0;
+  position: relative;
+  color: #0F1854;
+  letter-spacing: 1px;
+}
+.sectAbo__datos h3 {
+  padding: 0 10px;
+  font-family: "Concert One";
+  font-size: 55px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: #FC0 5px 0 5px;
+}
+.sectAbo__datos h2 {
+  font-family: "Concert One";
+  font-size: 45px;
+  font-weight: 200;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 3px 5px #A95000;
+  color: #EC6809;
+  letter-spacing: 1px;
+}
+.sectAbo__datos::before {
+  content: "DESDE";
+  position: absolute;
+  top: -10px;
+  z-index: 2;
+  color: #EC6809;
+  border-top: 2px solid #0F1854;
+  border-bottom: 2px solid #0F1854;
+  margin: 20px 0;
+  font-family: "Concert One";
+  font-size: 25px;
+  font-weight: 200;
+  text-align: center;
+  text-transform: uppercase;
+}
+.sectAbo__datos::after {
+  content: "1991";
+  position: absolute;
+  bottom: 10px;
+  color: #EC6809;
+  border-top: 2px solid #0F1854;
+  border-bottom: 2px solid #0F1854;
+  font-family: "Concert One";
+  font-size: 25px;
+  font-weight: 200;
+  text-align: center;
+  text-transform: uppercase;
+}
+.sectAbo p {
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 768px) {
+  .sectAbo__conte {
+    flex-wrap: wrap-reverse;
+  }
+}
+
+.cardProfile {
+  padding: 10px;
+  width: 270px;
+}
+.cardProfile img {
+  width: 115px;
+  height: 115px;
+  top: -50px;
+  border-radius: 50%;
+  z-index: 2;
+}
+.cardProfile__parr {
+  font-size: 10px;
+  font-weight: 400;
+  text-align: center;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -108,3 +108,25 @@ section {
     }
 }
 
+.iconsPrin {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 10px;
+
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        margin: 0 5px;
+        font-size: 17px;
+        color: $color-segundo;
+        /* background: var(--color-segundo); */
+        border-radius: 50%;
+        border: 2px solid $color-segundo;
+    }
+
+}
+
