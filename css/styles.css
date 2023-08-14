@@ -827,52 +827,22 @@ footer .food-icons .icons a:hover {
   transform: scale(1.1) rotateY(360deg);
 }
 
-.sectMenu1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  position: relative;
-  top: -100px;
-}
-.sectMenu1 .contMenus {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+.headerPagM {
   width: 100%;
-  top: 0;
-}
-.sectMenu1 .contMenus:nth-child(1) .contMenus__header {
-  background: url(../img/menu/sect/bgBurg.jpg);
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-.sectMenu1 .contMenus:nth-child(2) .contMenus__header {
-  background: url(../img/menu/sect/bgBaguette.jpg);
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-.sectMenu1 .contMenus:nth-child(3) .contMenus__header {
-  background: url(../img/menu/sect/bgSandw.jpg);
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-.sectMenu1 .contMenus__header {
+  height: 40vh;
   position: relative;
-  width: 100%;
-  height: 350px;
-  top: 0;
+  background: url("../img/headers/bg-menup.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   z-index: -1;
+  border-radius: 0 0 50% 50%;
 }
-.sectMenu1 .contMenus__header::before {
+.headerPagM::before {
   content: "";
   position: absolute;
   top: 0;
@@ -880,105 +850,274 @@ footer .food-icons .icons a:hover {
   width: 100%;
   height: 100%;
   background: rgba(15, 24, 84, 0.43);
+  border-radius: 0 0 50% 50%;
   z-index: -1;
 }
-.sectMenu1 .contMenus__header h2 {
+.headerPagM .header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+.headerPagM .header-content h1 {
   font-family: "Concert One";
-  font-size: 9vmin;
+  font-size: 115px;
   color: #FEE7A6;
   letter-spacing: 1px;
   text-align: center;
   font-weight: 200;
   text-transform: uppercase;
 }
-.sectMenu1 .contMenus__menus {
+@media screen and (max-width: 768px) {
+  .headerPagM .header-content h1 {
+    font-size: 85px;
+  }
+}
+
+.sectProdBig {
+  background: linear-gradient(270deg, #F28705 3.07%, #F2CB05 77.98%);
+  width: 100%;
+  position: relative;
+  overflow-y: hidden;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: row wrap;
+}
+.sectProdBig::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  height: 15px;
+  background: url(../../img/shape-white.png);
+  transform: rotate(180deg);
+}
+.sectProdBig::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 15px;
+  background: url(../../img/shape-white.png);
+}
+.sectProdBig__contImg {
+  position: relative;
+  padding: 20px 0;
+}
+.sectProdBig__contImg img {
+  width: 90%;
+  filter: drop-shadow(12px 15px 6px rgba(0, 0, 0, 0.74));
+  z-index: 2;
+}
+.sectProdBig__contImg .spanMov {
+  position: absolute;
+  top: 40%;
+  width: 4px;
+  height: 4px;
+  background: #FFF;
+  border-radius: 40%;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1), 0 0 0 8px rgba(255, 255, 255, 0.1);
+  animation: animate 3s linear infinite;
+  right: 50%;
+}
+@media screen and (max-width: 768px) {
+  .sectProdBig__contImg .spanMov {
+    right: 0;
+  }
+}
+.sectProdBig__contImg .spanMov::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 1px;
+  background: linear-gradient(90deg, #FFF, transparent);
+}
+.sectProdBig__contImg .spanMov:nth-child(1) {
+  top: 35%;
+  left: initial;
+  animation-delay: 0;
+  animation-duration: 3.5s;
+}
+.sectProdBig__contImg .spanMov:nth-child(2) {
+  top: 20%;
+  left: initial;
+  animation-delay: 0.2s;
+  animation-duration: 3s;
+}
+.sectProdBig__contImg .spanMov:nth-child(3) {
+  top: 50%;
+  left: initial;
+  animation-delay: 0.6s;
+  animation-duration: 1.5s;
+}
+.sectProdBig__contImg .spanMov:nth-child(4) {
+  top: 75%;
+  left: initial;
+  animation-delay: 0.4s;
+  animation-duration: 2s;
+}
+.sectProdBig__contImg .spanMov:nth-child(5) {
+  bottom: 90%;
+  left: initial;
+  animation-delay: 0.8s;
+  animation-duration: 3.5s;
+}
+.sectProdBig__contDat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  padding-right: 5px;
+  position: relative;
+  z-index: 2;
+}
+.sectProdBig__contDat img {
+  width: 100%;
+}
+.sectProdBig__contDat p {
+  color: #FFF;
+  padding-top: 25px;
+  font-family: "Oswald";
+  font-size: 27px;
+  font-weight: 300;
+  text-align: center;
+}
+.sectProdBig__contDat p span {
+  font-weight: 500;
+  font-size: 28px;
+}
+@media screen and (max-width: 768px) {
+  .sectProdBig__contDat p {
+    font-size: 22px;
+  }
+}
+.sectProdBig__contDat::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 100%;
+  bottom: 0;
+  right: 0;
+  background: url(../../img/icons/Papas.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-1100px);
+    opacity: 0;
+  }
+}
+.contMenus {
+  max-width: 860px;
+}
+@media screen and (max-width: 576px) {
+  .contMenus {
+    flex-direction: column;
+  }
+}
+.contMenus__menuVerti {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  flex-flow: column nowrap;
+  width: 20%;
+  gap: 15px;
+  margin-top: 10px;
+}
+@media screen and (max-width: 576px) {
+  .contMenus__menuVerti {
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    width: 100% !important;
+  }
+}
+.contMenus__menuVerti button {
+  font-size: 18px;
+}
+.contMenus__menuVerti img {
+  width: 70px;
+}
+@media screen and (max-width: 576px) {
+  .contMenus__contInter {
+    width: 100%;
+    margin-top: 50px;
+  }
+}
+.contMenus__contInter h3 {
+  font-family: "Concert One";
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: #FC0 5px 0 5px;
+}
+
+.contDatosMenu {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-  width: 100%;
+  height: 100%;
 }
-.sectMenu1 .contMenus__menus .menuContenedor {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: row nowrap;
-  margin: 25px 5px;
-  padding: 0 20px;
-  width: 40%;
-  min-width: 420px;
-  max-width: 720px;
-}
-.sectMenu1 .contMenus__menus .menuContenedor img {
-  width: 50%;
-}
-.sectMenu1 .contMenus__menus .menuContenedor__datosMen {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-  width: 40%;
-  min-height: 220px;
-  margin: 0 15px;
-}
-.sectMenu1 .contMenus__menus .menuContenedor__datosMen h3 {
-  font-family: "Concert One";
-  font-size: 24px;
-  font-weight: 400;
-  color: #EC6809;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin: 10px 0;
-}
-.sectMenu1 .contMenus__menus .menuContenedor__datosMen ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column nowrap;
-}
-.sectMenu1 .contMenus__menus .menuContenedor__datosMen ul li {
-  font-family: "Fjalla One";
-  font-size: 15px;
-  font-weight: 400;
+.contDatosMenu__datos li {
   color: #0F1854;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-.sectMenu1 .contMenus__menus .menuContenedor__contPrecios {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-flow: row nowrap;
-  padding: 5px 0;
-}
-.sectMenu1 .contMenus__menus .menuContenedor__precios {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-flow: column nowrap;
-}
-.sectMenu1 .contMenus__menus .menuContenedor__precios h4 {
-  font-family: "Fjalla One";
   font-size: 16px;
-  font-weight: 400;
-  color: #0F1854;
-  text-align: center;
+  font-weight: 500;
+  min-width: 200px;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  margin: 5px 0;
 }
-.sectMenu1 .contMenus__menus .menuContenedor__precios p {
-  font-family: "Fjalla One";
-  font-size: 15px;
-  font-weight: 400;
+.contDatosMenu__precios {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-flow: column nowrap;
+  height: 100%;
+  bottom: 0;
+}
+.contDatosMenu__precios h4 {
   color: #EC6809;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin: 5px 0;
+  font-size: 18px;
+}
+.contDatosMenu__precios p {
+  font-size: 16px;
+  font-weight: 500;
+}
+.contDatosMenu img {
+  width: 60%;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #FEE7A6;
+  background-color: #EC6809;
+}
+
+.nav-link {
+  color: #EC6809;
+}
+
+.nav-link:hover {
+  color: #0F1854;
+}
+
+.nav-pillsv .nav-link.active,
+.nav-pillsv .show > .nav-link {
+  color: #FEE7A6;
+  background-color: #0F1854;
+  border-radius: 10px;
 }
 
 .headerPagg {
