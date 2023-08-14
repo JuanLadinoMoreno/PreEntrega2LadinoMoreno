@@ -10,16 +10,26 @@
   overflow-x: hidden;
 }
 
+body {
+  font-family: "Oswald";
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(236, 104, 9, 0.7);
+  border-radius: 50px;
+}
+
 a {
   text-decoration: none;
 }
 
 h1, h2, h3, h4, h5 {
   overflow: hidden;
-}
-
-a {
-  text-decoration: none;
 }
 
 section {
@@ -38,6 +48,10 @@ section {
   opacity: 0;
 }
 
+.no-display {
+  display: none;
+}
+
 .r-span2 {
   grid-row: span 2;
 }
@@ -47,7 +61,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100px;
+  width: 155px;
   height: 45px;
   color: #FFF;
   border: 3px solid #FEE7A6;
@@ -55,6 +69,8 @@ section {
   text-align: center;
   letter-spacing: 1px;
   font-weight: 400;
+  margin: 15px;
+  z-index: 2;
   transition: all 0.5s;
 }
 .btn-transparent:hover {
@@ -70,12 +86,13 @@ section {
   width: 0px;
   height: 100%;
   background: #FFF;
-  z-index: -1;
-  transition: all 0.8s;
+  z-index: -2;
+  transition: all 1s;
 }
 .btn-transparent:hover::before {
-  width: 50px;
-  transform: translateX(100px);
+  width: 30px;
+  transform: translateX(125px);
+  opacity: 0;
 }
 
 .btn-prin {
@@ -112,8 +129,9 @@ section {
   transition: all 0.8s;
 }
 .btn-prin:hover::before {
-  width: 50px;
-  transform: translateX(100px);
+  width: 30px;
+  transform: translateX(70px);
+  opacity: 0;
 }
 
 .iconsPrin {
@@ -190,6 +208,11 @@ nav .icons {
   justify-content: space-around;
   align-items: center;
 }
+@media screen and (max-width: 768px) {
+  nav .icons {
+    display: none;
+  }
+}
 nav .icons a {
   display: flex;
   justify-content: center;
@@ -202,11 +225,6 @@ nav .icons a {
   /* background: var(--color-segundo); */
   border-radius: 50%;
   border: 2px solid #FFF;
-}
-@media screen and (max-width: 768px) {
-  nav .icons {
-    display: none;
-  }
 }
 nav .toogle-btn {
   position: absolute;
@@ -252,12 +270,13 @@ nav .toogle-btn i {
   border-radius: 15px;
   background: rgba(255, 255, 255, 0.2);
   overflow: hidden;
+  z-index: 1;
   border-left: 2px solid rgba(255, 255, 255, 0.5);
   border-bottom: 2px solid rgba(255, 255, 255, 0.5);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   border-right: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   transition: all 0.5s;
   height: 250px;
   top: 100px;
@@ -273,12 +292,16 @@ nav .toogle-btn i {
   justify-content: space-around;
   align-items: center;
   flex-flow: column nowrap;
+  margin-bottom: 1px solid #0F1854;
 }
 .dropdown-menus ul a {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
-  color: #FEE7A6;
+  color: #0F1854;
   padding: 10px 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -303,11 +326,7 @@ nav .toogle-btn i {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  z-index: -1;
   clip-path: circle(140vh at 50% -50vh);
-  /* clip-path: polygon(0 0, 100% 0%, 100% 50%, 50% 90%, 0% 50%); */
-  /* -webkit-clip-path: circle(70.0% at 50% 25%);
-  clip-path: circle(70.0% at 50% 25%); */
 }
 .header::before {
   content: "";
@@ -324,24 +343,28 @@ nav .toogle-btn i {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /* z-index: 2; */
-}
-.header .header-content h3 {
-  font-family: "Concert One";
-  color: #EC6809;
-  font-size: 35px;
-  font-weight: 100;
-  letter-spacing: 1px;
-  text-align: center;
 }
 .header .header-content h1 {
   font-family: "Concert One";
-  font-size: 115px;
-  color: #FEE7A6;
+  font-size: 105px;
+  color: transparent;
+  padding: 0 15px;
   letter-spacing: 1px;
   text-align: center;
   font-weight: 200;
   text-transform: uppercase;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #FFF;
+  animation: efectTitle 2.5s linear infinite alternate-reverse;
+}
+.header .header-content h2 {
+  font-family: "Concert One";
+  color: #FFF;
+  font-size: 35px;
+  font-weight: 100;
+  letter-spacing: 1px;
+  text-align: center;
+  position: relative;
 }
 .header .header-content p {
   font-family: "Fjalla One";
@@ -357,19 +380,34 @@ nav .toogle-btn i {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* height: 100px; */
   width: 100%;
-  /* background: #0F1854; */
   position: absolute;
-  bottom: 20px;
-  /* transform: translateX(-50%, -50%); */
-  /* z-index: 5; */
+  bottom: 10px;
+  animation: trasIcon 4s linear infinite alternate-reverse;
 }
 .cont-img-center img {
   width: 200px;
   height: 200px;
 }
 
+@keyframes trasIcon {
+  from {
+    transform: translateY(10px);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
+@keyframes efectTitle {
+  from {
+    text-shadow: rgb(255, 204, 0) 5px 0 15px;
+    opacity: 1;
+  }
+  to {
+    text-shadow: rgba(255, 204, 0, 0.5) 5px 0 15px;
+    opacity: 0.8;
+  }
+}
 .sect-icons {
   display: flex;
   justify-content: center;
@@ -415,17 +453,13 @@ nav .toogle-btn i {
 }
 .menu-index .cont-menu-index {
   position: relative;
-  background: #0F1854;
   /* border: 1px solid #fff; */
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
-  flex-direction: column;
-  /* width: 33%; */
-  min-width: 350px;
-  height: 480px;
+  flex-flow: column nowrap;
+  height: 420px;
   padding: 10px 20px;
-  z-index: -1;
 }
 .menu-index .cont-menu-index:nth-child(1) {
   background: #0F1854;
@@ -442,27 +476,29 @@ nav .toogle-btn i {
 .menu-index .cont-menu-index:nth-child(5) {
   background: #80D25B;
 }
-.menu-index .cont-menu-index:nth-child(5) img, .menu-index .cont-menu-index:nth-child(4) img {
-  right: -20px;
-  width: 380px;
-  height: 400px;
-}
 .menu-index .cont-menu-index h3 {
   font-family: "Concert One";
-  font-size: 35px;
+  font-size: 30px;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 200;
   color: #FFF;
+  padding-left: 10px;
 }
 .menu-index .cont-menu-index p {
   /* font-family: var(--font-tercera); */
   color: #FFF;
-  width: 50%;
-  font-size: 16px;
+  width: 60%;
+  font-size: 18px;
   font-weight: 300;
   letter-spacing: 1px;
   z-index: 2;
+  padding-left: 10px;
+}
+@media screen and (max-width: 768px) {
+  .menu-index .cont-menu-index p {
+    width: 100%;
+  }
 }
 .menu-index .cont-menu-index img {
   position: absolute;
@@ -471,24 +507,37 @@ nav .toogle-btn i {
   width: 280px;
   height: 400px;
 }
-
-.sect-bseller {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
+@media screen and (max-width: 768px) {
+  .menu-index .cont-menu-index img {
+    right: 0;
+    width: 180px;
+    height: 300px;
+  }
 }
+.menu-index .cont-menu-index ul {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-flow: column nowrap;
+  color: #FFF;
+  width: 50%;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  z-index: 2;
+  padding-left: 40px;
+}
+
 .sect-bseller .cont-text {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 50%;
 }
 .sect-bseller .cont-text h3 {
   color: #0F1854;
   font-family: "Fjalla One";
-  font-size: 4vmin;
+  font-size: 30px;
   font-weight: 500;
   letter-spacing: 1px;
   text-align: center;
@@ -496,25 +545,57 @@ nav .toogle-btn i {
   margin: 10px;
 }
 .sect-bseller .cont-text p {
-  font-family: "Oswald";
+  /* font-family: var(--font-tercera); */
   color: #EC6809;
-  font-size: 2.3vmin;
+  font-size: 26px;
   font-weight: 400;
   letter-spacing: 1px;
   text-align: center;
-  margin: 10px;
+  margin: 20px;
+  padding: 10px;
 }
 .sect-bseller .img-cont {
   display: grid;
-  grid-template-columns: repeat(2, 170px);
-  grid-template-rows: repeat(2, 170px);
+  grid-template-columns: repeat(2, 200px);
+  grid-template-rows: repeat(2, 200px);
   gap: 2px;
+  align-content: center;
+  position: relative;
+}
+@media screen and (max-width: 576px) {
+  .sect-bseller .img-cont {
+    grid-template-columns: repeat(2, 140px);
+    grid-template-rows: repeat(2, 140px);
+    align-content: center;
+  }
 }
 .sect-bseller .img-cont img {
   width: 100%;
   height: 100%;
+  position: relative;
+}
+.sect-bseller .img-cont::after {
+  content: "";
+  background: url(../../img/icons/bseller.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  left: -50px;
+  width: 160px;
+  height: 160px;
+  animation: bestSell 5s linear infinite alternate-reverse running;
 }
 
+@keyframes bestSell {
+  from {
+    transform: rotateY(-50deg);
+  }
+  to {
+    transform: rotateY(50deg);
+  }
+}
 .ban-asados {
   position: relative;
   display: flex;
@@ -597,31 +678,31 @@ nav .toogle-btn i {
 .sect-gallery .grid-container {
   width: 80%;
   display: grid;
-  gap: 5px;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 210px);
-  padding: 15px;
-  overflow-y: hidden;
+  gap: 5px;
 }
-.sect-gallery .grid-container:hover .item {
-  opacity: 0.4;
+@media screen and (max-width: 768px) {
+  .sect-gallery .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 210px);
+  }
+}
+@media screen and (max-width: 576px) {
+  .sect-gallery .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 210px);
+  }
 }
 .sect-gallery .item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border-radius: 10px;
-  transition: all 0.6s;
-  border-radius: 10px;
+  overflow-y: hidden;
+  transition: all 0.5s;
 }
 .sect-gallery .item img {
   width: 100%;
   height: 100%;
-}
-.sect-gallery .item:hover {
-  transform: scale(1.08);
-  opacity: 1 !important;
-  z-index: 2;
+  object-fit: cover;
 }
 
 .sect-events {
@@ -923,6 +1004,7 @@ footer .food-icons .icons a:hover {
   width: 100%;
   height: 100%;
   background: rgba(15, 24, 84, 0.43);
+  border-radius: 0 0 50% 50%;
   z-index: -1;
 }
 .headerPagg .header-content {
@@ -939,6 +1021,11 @@ footer .food-icons .icons a:hover {
   text-align: center;
   font-weight: 200;
   text-transform: uppercase;
+}
+@media screen and (max-width: 768px) {
+  .headerPagg .header-content h1 {
+    font-size: 85px;
+  }
 }
 
 .sectAbo {
@@ -1058,6 +1145,7 @@ footer .food-icons .icons a:hover {
   width: 100%;
   height: 100%;
   background: rgba(15, 24, 84, 0.43);
+  border-radius: 0 0 50% 50%;
   z-index: -1;
 }
 .headerPaga .header-content {
@@ -1074,6 +1162,11 @@ footer .food-icons .icons a:hover {
   text-align: center;
   font-weight: 200;
   text-transform: uppercase;
+}
+@media screen and (max-width: 768px) {
+  .headerPaga .header-content h1 {
+    font-size: 85px;
+  }
 }
 
 .scAsados {
@@ -1192,6 +1285,7 @@ footer .food-icons .icons a:hover {
   width: 100%;
   height: 100%;
   background: rgba(15, 24, 84, 0.43);
+  border-radius: 0 0 50% 50%;
   z-index: -1;
 }
 .headerPag .header-content {
@@ -1208,6 +1302,11 @@ footer .food-icons .icons a:hover {
   text-align: center;
   font-weight: 200;
   text-transform: uppercase;
+}
+@media screen and (max-width: 768px) {
+  .headerPag .header-content h1 {
+    font-size: 85px;
+  }
 }
 
 .sectForm {

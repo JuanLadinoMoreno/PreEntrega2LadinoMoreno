@@ -6,40 +6,33 @@
     .grid-container {
 
         width: 80%;
-        display: grid;
-        gap: 5px;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(3, 210px);
-        padding: 15px;
-        overflow-y: hidden;
+        @include dGrid(repeat(4, 1fr), repeat(3, 210px), 5px);
+        
 
-        &:hover .item{
-            opacity: 0.4;
-            
+        @include Tablet() {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 210px);
+        }
+
+        @include Phone() {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(3, 210px);
         }
     }
 
     .item {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         border-radius: 10px;
-        transition: all .6s;
-        border-radius: 10px;
-        // overflow-y: hidden;
+        overflow-y: hidden;
+        transition: all .5s;
 
         img {
             width: 100%;
             height: 100%;
-            // border-radius: 10px;
-            // object-fit: cover;
-        }
-
-        &:hover{
-            transform: scale(1.08);
-            opacity: 1 !important;
-            z-index: 2;
+            object-fit: cover;
         }
     }
 }
+
+
+
 

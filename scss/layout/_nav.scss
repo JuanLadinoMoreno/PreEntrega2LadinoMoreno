@@ -57,6 +57,11 @@ nav {
         justify-content: space-around;
         align-items: center;
 
+        @include Tablet() {
+            // opacity: 0;
+            display: none;
+        }
+
         a {
             display: flex;
             justify-content: center;
@@ -69,11 +74,6 @@ nav {
             /* background: var(--color-segundo); */
             border-radius: 50%;
             border: 2px solid #FFF;
-        }
-
-        @include Tablet() {
-            // opacity: 0;
-            display: none;
         }
     
     }
@@ -108,11 +108,10 @@ nav {
 }
 
 
+
+
 .dropdown-menus {
     @include dFlex(center, center, column nowrap);
-    // align-items: flex-end;
-    // position: absolute;
-    // width: 250px;
     @include cardBlur(75%, 75%);
     height: 250px;
     top: 100px;
@@ -127,41 +126,30 @@ nav {
         height: 100%;
         width: 100%;
         @include dFlex(space-around, center, column nowrap);
-
+        margin-bottom: 1px solid $color-primero;
+       
 
         a {
             // height: 50px;
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 700;
-            color: $color-tercero;
+            color: $color-primero;
             padding: 10px 0;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+             z-index: 2;
             @include dFlex(center, center, column nowrap);
 
-            // &::before {
-            //     content: '';
-            //     position: absolute;
-            //     top: 10px;
-            //     left: 0;
-            //     width: 80%;
-            //     height: 1px;
-
-            //     background: #FFF;
-
-
-            // }
+            
 
 
 
         }
     }
 
-    // @include Tablet() {
-    //     display: block;
-    // }
 
 }
 
 .dropdown-menus.opens {
     display: block;
-    // position: fixed;
 }

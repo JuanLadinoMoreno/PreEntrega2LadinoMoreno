@@ -1,16 +1,24 @@
 body{
     font-family: $font-cuarta;
+    overflow-x: hidden;
 }
+
+body::-webkit-scrollbar{
+    width: 12px;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: rgba($color: $color-segundo, $alpha: .7);
+    border-radius: 50px;
+}
+
 a {
     text-decoration: none;
 }
+
 
 h1, h2, h3, h4, h5{
     overflow: hidden;
-}
-
-a {
-    text-decoration: none;
 }
 
 section {
@@ -29,6 +37,11 @@ section {
     opacity: 0;
 }
 
+.no-display{
+    display: none;
+}
+
+
 .r-span2 {
     grid-row: span 2;
 }
@@ -38,7 +51,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100px;
+    width: 155px;
     height: 45px;
     color: #FFF;
     border: 3px solid $color-tercero;
@@ -46,6 +59,8 @@ section {
     text-align: center;
     letter-spacing: 1px;
     font-weight: 400;
+    margin: 15px;
+    z-index: 2;
     transition: all 0.5s;
 
     &:hover{
@@ -62,15 +77,15 @@ section {
         width: 0px;
         height: 100%;
         background: #FFF;
-        z-index: -1;
-        transition: all 0.8s;
+        z-index: -2;
+        transition: all 1s;
         
     }
 
     &:hover::before{
-        width: 50px;
-        transform: translateX(100px);
-        
+        width: 30px;
+        transform: translateX(125px);
+        opacity: 0;
     }
 }
 
@@ -111,9 +126,9 @@ section {
     }
 
     &:hover::before{
-        width: 50px;
-        transform: translateX(100px);
-        
+        width: 30px;
+        transform: translateX(70px);
+        opacity: 0;        
     }
 }
 
@@ -138,4 +153,3 @@ section {
     }
 
 }
-
