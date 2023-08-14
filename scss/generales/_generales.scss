@@ -47,6 +47,10 @@ div{
     display: none;
 }
 
+.r-span2 {
+    grid-row: span 2;
+}
+
 .btn-transparent {
     position: relative;
     display: flex;

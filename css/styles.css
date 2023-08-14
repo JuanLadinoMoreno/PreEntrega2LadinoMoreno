@@ -6,8 +6,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: var(--font-cuarta);
-  overflow-x: hidden;
 }
 
 body {
@@ -36,6 +34,10 @@ section {
   margin-top: 100px;
 }
 
+div {
+  overflow-y: hidden;
+}
+
 .w-50 {
   width: 50%;
 }
@@ -50,6 +52,10 @@ section {
 
 .no-display {
   display: none;
+}
+
+.r-span2 {
+  grid-row: span 2;
 }
 
 .btn-transparent {
@@ -1580,6 +1586,8 @@ footer .food-icons .icons a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  /*ESTO ES PARA QUE CENTRE EL HIJO QUE ES EL CONTAINER*/
+  /* width: 100%; */
   height: 100vh;
   background: #112D42;
   position: relative;
@@ -1640,6 +1648,7 @@ footer .food-icons .icons a:hover {
 }
 .sectForm .contForm .info .contentInf .info-text .item {
   display: flex;
+  /*APARECEN UNA A LADO DEL OTRO*/
   cursor: pointer;
   width: 100%;
 }
@@ -1723,6 +1732,7 @@ footer .food-icons .icons a:hover {
   letter-spacing: 1px;
   color: #888;
   pointer-events: none;
+  /*NO TOMO EN CUENTA EL CLIC AL SPAN, NO PERMITE SELECCIONARLO*/
   transition: all 0.5s;
 }
 .form .form-box .input-box input:focus ~ span,
